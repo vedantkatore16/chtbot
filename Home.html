@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  <title>Green Leadership Initiative</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #1a1a1a;
+    }
+    /* Navigation Styling */
+    .nav-link {
+        font-weight: 500;
+        color: #222 !important;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Removes flicker */
+      }
+
+      .dropdown-menu {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+      }
+
+      .nav-item {
+        padding: 0 10px;
+      }
+      .nav-link {
+        font-weight: 500;
+        color: #222 !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #f18c10 !important; /* You can change this to any color you like */
+      }
+
+      .dropdown-item:hover {
+        background-color: #f3f1f1;
+        color: #f18c10;
+        border-radius: 10px;
+      }
+    .services {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+  color: #10253f;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0f1c2e;
+  text-decoration: underline;
+}
+
+.services .intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #3756a3;
+  line-height: 1.6;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+.service-item {
+  padding: 20px;
+  background: #f9f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 8px;
+  color: #0c1c39;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  color: #44578c;
+  line-height: 1.4;
+}
+
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 40px;
+    }
+
+    /* === Benefit Cards Section === */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 1 1 calc(33.333% - 30px);
+      max-width: calc(33.333% - 30px);
+      background: #f9f9f9;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* === Contact Section === */
+    .contact-section {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 40px;
+    }
+
+    .contact-section label {
+      display: block;
+      font-weight: bold;
+      margin: 16px 0 6px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background-color: #f5f7fa;
+      font-size: 1rem;
+    }
+
+    .contact-section textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-section button {
+      margin-top: 20px;
+      background-color: #f4e2cc;
+      color: #1a1a1a;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #12243A;
+      color: #fff;
+      padding: 40px 20px 20px;
+      margin-top: 60px;
+    }
+
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    footer h4 {
+      margin-bottom: 12px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    footer form {
+      display: flex;
+      max-width: 300px;
+    }
+
+    footer input[type="email"] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    footer button {
+      background-color: #c9eb46;
+      color: #1a1a1a;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer .bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 30px;
+      color: #bbb;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .card {
+        flex: 1 1 calc(45% - 20px);
+        max-width: calc(45% - 20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      footer .container,
+      footer .bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+
+
+    /* === Carousel Styling === */
+#carouselExample {
+  max-height: 500px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+#carouselExample .carousel-item img {
+  object-fit: cover;
+  margin-top: 1px;
+}
+
+/* text  */
+
+        .container1 {
+            background-color: #bef264; /* Darker lime background */
+            text-align: center;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1024px;
+            margin-top: 0.5px; /* Margin from the top */
+            align-items: center;
+            margin: auto;
+           
+        }
+        .container1 h1 {
+            font-size: 1.875rem; /* Tailwind's text-3xl */
+            font-weight: bold;
+            color: #2d3748; /* Tailwind's text-gray-800 */
+            margin-bottom: 1rem;
+        }
+        .container1 p {
+            font-size: 1.125rem; /* Tailwind's text-lg */
+            color: #2d3748; /* Tailwind's text-gray-800 */
+        }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">EcoBrand</a>
+
+      <div class="collapse navbar-collapse show">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./Services/Carbon.html">Carbon Accounting</a></li>
+              <li><a class="dropdown-item" href="./Services/ESGRepo.html">ESG Reporting</a></li>
+              <li><a class="dropdown-item" href="./Services/ESGBench.html">ESG Benchmarking</a></li>
+              <li><a class="dropdown-item" href="./Services/LifeCycle.html">Life Cycle Assessment</a></li>
+              <li><a class="dropdown-item" href="./Services/SupplyChain.html">Sustainable Supply Chains</a></li>
+              <li><a class="dropdown-item" href="./Services/Strategies.html">Circular Economy Strategies</a></li>
+              <li><a class="dropdown-item" href="./Services/Embedded.html">Embedding Sustainability</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Sectors
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="energy.html">Energy Sector</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="transport.html"
+                  >Transportation and logistics sector</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="fmcg.html">FMCG Sector</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="transport.html"
+                  >Banking and Financial Sector</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="manufacture.html"
+                  >Manufacturing and Industrial Sector</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="retail.html"
+                  >Retail and E-Commerce Sector</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="realestate.html"
+                  >Real Estate and Infrastructure Sector</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="tech.html"
+                  >Technology and IT Services Sector</a
+                >
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Blogs
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Latest News</a></li>
+              <li><a class="dropdown-item" href="#">Insights</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- === Image Slider Section === -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1300">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/010.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/011.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Sustainable-Food-Supply-Chain.png" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- text  -->
+ <div class="container1">
+        <h1>EcoBrand for Sustainable Business Growth</h1>
+        <p>EcoBrand helps businesses thrive by integrating sustainable practices that benefit the planet, enhance brand values, and increase profitability.</p>
+    </div>
+
+
+  
+    <!-- === Our Services Section === -->
+<section class="services">
+    <h2>Our Services</h2>
+    <p class="intro">
+      EcoBrand offers a comprehensive suite of sustainability consulting services designed to help your business thrive in a rapidly changing world. We go beyond simple compliance to help you integrate sustainable practices that benefit the planet, enhance your brand value, and increase profitability. Here's how we can help:
+    </p>
+    
+    <div class="service-grid">
+      <a href="Carbon.html">
+        <div class="service-item">
+          <img src="images/s1.png" alt="Carbon Accounting">
+          <h3>Carbon Accounting</h3>
+          <p>Quantify and monitor your greenhouse gas emissions to achieve sustainability</p>
+        </div>
+      </a>
+      
+      <a href="ESGRepo.html">
+        <div class="service-item">
+          <img src="images/s2.png" alt="ESG Reporting">
+          <h3>ESG Reporting</h3>
+          <p>Comprehensive ESG reports that demonstrate your commitment to sustainability.</p>
+        </div>
+      </a>
+      
+      <a href="ESGBench.html">
+        <div class="service-item">
+          <img src="images/s4.png" alt="ESG Benchmarking">
+          <h3>ESG Benchmarking</h3>
+          <p>Compare ESG performance with industry leaders to optimize sustainability and growth.</p>
+        </div>
+      </a>
+      
+      <a href="LifeCycle.html">
+        <div class="service-item">
+          <img src="images/s5.png" alt="Life Cycle Assessment">
+          <h3>Life Cycle Assessment</h3>
+          <p>Evaluate the environmental impacts of products across their entire life cycle, from raw material sourcing to disposal or recycling.</p>
+        </div>
+      </a>
+      
+      <a href="SupplyChain.html">
+        <div class="service-item">
+          <img src="images/s6.png" alt="Sustainable Supply Chains">
+          <h3>Sustainable Supply Chains</h3>
+          <p>Integrate environmental and social considerations into supply chain management, from raw materials to delivery.</p>
+        </div>
+      </a>
+      
+      <a href="Strategies.html">
+        <div class="service-item">
+          <img src="images/s7.png" alt="Circular Economy Strategies">
+          <h3>Circular Economy Strategies</h3>
+          <p>Adopt strategies that focus on reducing waste, reusing resources, and creating circular business models.</p>
+        </div>
+      </a>
+      
+      <a href="Embedded.html">
+        <div class="service-item">
+          <img src="images/s8.png" alt="Embedding Sustainability">
+          <h3>Embedding Sustainability</h3>
+          <p>Integrate sustainability into your business culture and long-term strategy.</p>
+        </div>
+      </a>
+      
+    </div>
+  </section>
+  
+
+  <!-- === Benefits Section === -->
+  <section>
+    <h2>Why Green Leadership Initiative Important?</h2>
+    <div class="cards-container">
+      <div class="card">
+        <div><img src="images/b1.png" alt=""></div>
+        <h3>Environmental Impact</h3>
+        <p>Reducing carbon and conserving resources and waste is good for the planet.</p>
+      </div>
+      <div class="card">
+        <div><img src="images/b2.png" alt=""></div>
+        <h3>Social Responsibility</h3>
+        <p>Fair labor practices, community engagement, and diversity are good for social equity and stronger communities.</p>
+      </div>
+      <div class="card">
+        <div><img src="images/b3.png" alt=""></div>
+        <h3>Economic Benefits</h3>
+        <p>Sustainability can lead to cost savings, efficiency, innovation, and profit.</p>
+      </div>
+      <div class="card">
+        <div><img src="images/b4.png" alt=""></div>
+        <h3>Investor Attraction</h3>
+        <p>Investors are increasingly looking for companies with strong sustainability credentials which can lead to better funding.</p>
+      </div>
+      <div class="card">
+        <div><img src="images/b5.png" alt=""></div>
+        <h3>Regulatory Compliance</h3>
+        <p>ESG standards help avoid legal penalties and improve corporate reputation.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- === Footer Section === -->
+  <footer>
+    <div class="container">
+      <div>
+        <h2 style="color: #7fa2ff;">ECOBRAND<span style="color: #91d300;">+</span></h2>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Sector</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Subscribe to our newsletter:</h4> 
+    
+        <form>
+          <input type="email" placeholder="Email Address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div>© 2024 EcoBrand. All Rights Reserved</div>
+      <div>
+        <a href="#">🔗</a>
+        <a href="#">🌐</a>
+        <a href="#">❌</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
